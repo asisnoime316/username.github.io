@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Section - SpongeBob Fan Site</title>
+    <link rel="stylesheet" href="stylles.css">
+</head>
+<body>
+    <header>
+        <h1>Krusty Krab Quiz & Krabby Patty Builder</h1>
+    </header>
+
+    <div class="interactive-section" id="quiz-section">
+        <h2>Which Krusty Krab Employee Are You?</h2>
+        <form id="krusty-quiz">
+            <label for="question1">1. What's your favorite part of the job?</label>
+            <select id="question1">
+                <option value="SpongeBob">Making food</option>
+                <option value="Squidward">Customer service</option>
+                <option value="Mr. Krabs">Handling money</option>
+            </select>
+
+            <label for="question2">2. How would you describe your work ethic?</label>
+            <select id="question2">
+                <option value="SpongeBob">Hardworking and enthusiastic</option>
+                <option value="Squidward">Minimal effort</option>
+                <option value="Mr. Krabs">Focused on profit</option>
+            </select>
+
+            <label for="question3">3. What's your ideal workplace outfit?</label>
+            <select id="question3">
+                <option value="SpongeBob">A cheerful hat</option>
+                <option value="Squidward">Uniform, but I don't care</option>
+                <option value="Mr. Krabs">Anything with dollar signs</option>
+            </select>
+
+            <button type="button" onclick="calculateResult()">Find Out!</button>
+        </form>
+        <p id="quiz-result"></p>
+    </div>
+
+    <div class="interactive-section" id="patty-game">
+        <h2>Build Your Own Krabby Patty!</h2>
+        <p>Select your ingredients to build the perfect Krabby Patty!</p>
+
+        <form id="patty-builder">
+            <label><input type="checkbox" id="bun" value="Top Bun"> Top Bun</label><br>
+            <label><input type="checkbox" id="patty" value="Patty"> Patty</label><br>
+            <label><input type="checkbox" id="cheese" value="Cheese"> Cheese</label><br>
+            <label><input type="checkbox" id="lettuce" value="Lettuce"> Lettuce</label><br>
+            <label><input type="checkbox" id="tomato" value="Tomato"> Tomato</label><br>
+            <label><input type="checkbox" id="pickles" value="Pickles"> Pickles</label><br>
+            <label><input type="checkbox" id="bottom-bun" value="Bottom Bun"> Bottom Bun</label><br>
+
+            <button type="button" onclick="buildPatty()">Build Patty</button>
+        </form>
+        <p id="patty-result"></p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 SpongeBob SquarePants Fan Site | All rights reserved</p>
+    </footer>
+
+    <script>
+        function calculateResult() {
+            const answer1 = document.getElementById('question1').value;
+            const answer2 = document.getElementById('question2').value;
+            const answer3 = document.getElementById('question3').value;
+
+            let result = '';
+
+            if (answer1 === 'SpongeBob' && answer2 === 'SpongeBob' && answer3 === 'SpongeBob') {
+                result = 'You are SpongeBob! You love your job and put in 110% effort!';
+            } else if (answer1 === 'Squidward' || answer2 === 'Squidward' || answer3 === 'Squidward') {
+                result = 'You are Squidward. You just want to do your job and go home.';
+            } else {
+                result = 'You are Mr. Krabs! You’re all about the money, money, money!';
+            }
+
+            document.getElementById('quiz-result').innerText = result;
+        }
+
+        function buildPatty() {
+            const ingredients = [];
+            if (document.getElementById('bun').checked) ingredients.push('Top Bun');
+            if (document.getElementById('patty').checked) ingredients.push('Patty');
+            if (document.getElementById('cheese').checked) ingredients.push('Cheese');
+            if (document.getElementById('lettuce').checked) ingredients.push('Lettuce');
+            if (document.getElementById('tomato').checked) ingredients.push('Tomato');
+            if (document.getElementById('pickles').checked) ingredients.push('Pickles');
+            if (document.getElementById('bottom-bun').checked) ingredients.push('Bottom Bun');
+
+            if (ingredients.length > 0) {
+                document.getElementById('patty-result').innerText = `You built a Krabby Patty with: ${ingredients.join(', ')}`;
+            } else {
+                document.getElementById('patty-result').innerText = 'You didn\'t select any ingredients! Try again!';
+            }
+        }
+    </script>
+</body>
+</html>

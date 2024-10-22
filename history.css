@@ -1,0 +1,53 @@
+body {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+}
+
+header {
+    text-align: center;
+    background-color: #00bfff;
+    padding: 20px;
+    color: white;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    width: calc(96% - 30px);
+}
+
+#history {
+    padding: 20px;
+    background-color: #f0f8ff;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#history h2 {
+    font-size: 2em;
+    color: #4682b4;
+    text-align: center;
+}
+
+#history h2:hover {
+    transform: translateY(-5px);
+}
+
+#history p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+footer {
+    text-align: center;
+    background-color: #00bfff;
+    padding: 15px 0;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

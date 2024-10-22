@@ -1,0 +1,89 @@
+body {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+}
+
+header {
+    text-align: center;
+    background-color: #00bfff;
+    padding: 20px;
+    color: white; 
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    width: calc(96% - 30px);
+}
+
+h2 {
+    font-size: 2em;
+    text-align: center;
+    color: #4682b4;
+
+}
+
+.merchandise-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.merch-item {
+    background-color: #f0f8ff; /* Alice blue */
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.merch-item h3 {
+    color: #008b8b; /* Steel blue */
+    margin-bottom: 10px;
+}
+
+.merch-item p {
+    color: #333;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.merch-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.merch-img:hover {
+    transform: translateY(-5px);
+}
+
+button {
+    background-color: #00bfff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4682b4; /* Steel blue */
+}
+
+footer {
+    text-align: center;
+    background-color: #00bfff;
+    padding: 15px 0;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

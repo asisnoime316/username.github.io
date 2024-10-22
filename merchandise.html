@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpongeBob Merchandise</title>
+    <link rel="stylesheet" href="merchandise.css">
+    <link rel="stylesheet" href="front.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Welcome to the Krusty Krab!</h1>
+            <p>Your favorite place for Krabby Patties in Bikini Bottom!</p>
+        </div>
+    </header>
+
+    <nav class="menu-bar">
+        <div class="container">
+            <ul> 
+                <li><a href="/front.html">Home</a></li>
+                <li><a href="/history.html">History</a></li>
+                <li><a href="/employees.html">Employees</a></li>
+                <li><a href="/menu.html">Menu</a></li>
+                <li><a href="/reviews.html">Reviews</a></li>
+                <li><a href="/trivia.html">Trivia</a></li>
+                <li><a href="/fun-facts.html">Fun Facts</a></li>
+                <li><a href="/merchandise.html">Merchandise</a></li>
+                <li><a href="/offers.html">Offers</a></li>
+            </ul>
+      </nav>
+    <section>
+      <h2>SpongeBob & Krusty Krab-Themed Merchandise</h2>
+    </section>
+    <!-- Merchandise Section -->
+    <div class="merchandise-section">
+        <div class="merch-item">
+            <img src="spongebob-tshirt.jpg" alt="SpongeBob T-Shirt" class="merch-img">
+            <h3>SpongeBob T-Shirt</h3>
+            <p>Wear your favorite sponge with this official SpongeBob T-shirt. Available in all sizes.</p>
+            <button onclick="buyNow()">Buy Now</button>
+        </div>
+
+        <div class="merch-item">
+            <img src="krustykrab-poster.jpg" alt="Krusty Krab Poster" class="merch-img">
+            <h3>Krusty Krab Poster</h3>
+            <p>Decorate your room with a vintage-style Krusty Krab poster. Perfect for fans of the iconic restaurant!</p>
+            <button onclick="buyNow()">Buy Now</button>
+        </div>
+
+        <div class="merch-item">
+            <img src="krabbypatty-keychain.webp" alt="Krabby Patty Keychain" class="merch-img">
+            <h3>Krabby Patty Keychain</h3>
+            <p>Carry a little bit of the Krusty Krab with you wherever you go with this Krabby Patty keychain.</p>
+            <button onclick="buyNow()">Buy Now</button>
+        </div>
+
+        <div class="merch-item">
+            <img src="plankton-mug.jpg" alt="Plankton Mug" class="merch-img">
+            <h3>Plankton Mug</h3>
+            <p>Start your day with a laugh with this Plankton-themed mug. Watch out for secret formulas!</p>
+            <button onclick="buyNow()">Buy Now</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 SpongeBob SquarePants Fan Site | All rights reserved</p>
+    </footer>
+
+    <script>
+        function buyNow() {
+            alert("Redirecting to the purchase page...");
+            // Here you can add a redirect to an external e-commerce link
+        }
+    </script>
+</body>
+</html>
